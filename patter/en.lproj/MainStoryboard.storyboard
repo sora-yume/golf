@@ -21,10 +21,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rVv-ez-bpG" secondAttribute="trailing" constant="81" id="Dvc-Re-Klw"/>
-                                    <constraint firstItem="rVv-ez-bpG" firstAttribute="top" secondItem="ko7-2Z-Oiu" secondAttribute="top" constant="135" id="U7d-BJ-f4i"/>
-                                    <constraint firstAttribute="bottom" secondItem="rVv-ez-bpG" secondAttribute="bottom" constant="39" id="rpW-yw-sbl"/>
-                                    <constraint firstItem="rVv-ez-bpG" firstAttribute="leading" secondItem="ko7-2Z-Oiu" secondAttribute="leading" constant="83" id="uWI-TM-e17"/>
+                                    <constraint firstItem="rVv-ez-bpG" firstAttribute="centerX" secondItem="ko7-2Z-Oiu" secondAttribute="centerX" type="default" id="1NY-yH-S6I"/>
+                                    <constraint firstItem="rVv-ez-bpG" firstAttribute="top" secondItem="ko7-2Z-Oiu" secondAttribute="top" constant="137" id="huV-1u-AR2"/>
+                                    <constraint firstItem="rVv-ez-bpG" firstAttribute="leading" secondItem="ko7-2Z-Oiu" secondAttribute="leading" constant="82" id="pn2-cN-uBc"/>
+                                    <constraint firstAttribute="bottom" secondItem="rVv-ez-bpG" secondAttribute="bottom" constant="37" id="rii-wt-nBS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Yo-Lht">
@@ -68,21 +68,6 @@
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ball" candidateClass="UIView"/>
-                <relationship kind="outlet" name="banker" candidateClass="UIView"/>
-                <relationship kind="outlet" name="cup" candidateClass="UIView"/>
-                <relationship kind="outlet" name="shibaA" candidateClass="UIView"/>
-                <relationship kind="outlet" name="shibaB" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

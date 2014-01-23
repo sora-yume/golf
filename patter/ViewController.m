@@ -28,6 +28,7 @@ typedef enum{
 @implementation ViewController
 @synthesize ball, anchorArray;
 @synthesize shibaA, shibaB, banker, cup;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -65,26 +66,26 @@ typedef enum{
 {
     
     //createGround
-    shibaA = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,200)];//define ichi,size(xpiont,ypoint,width,height)
-    shibaA.center = CGPointMake(160,340);//
-    shibaA.layer.cornerRadius = 15.0;//coner
-    //[self.view addSubview:shibaA];
+    shibaA = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,200)];//define xpoint,ypoint,size,size->(xpiont,ypoint,width,height)
+    shibaA.center = CGPointMake(160,340); //xpoint,ypoint
+    shibaA.layer.cornerRadius = 15.0; //conerを丸く
+    [self.view addSubview:shibaA];
     
     shibaB = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,50)];
     shibaB.center = CGPointMake(120,120);
     shibaB.layer.cornerRadius = 15.0;
-    //[self.view addSubview:shibaB];
+    [self.view addSubview:shibaB];
     
     banker = [[UIView alloc] initWithFrame:CGRectMake(0,0,100,50)];
     banker.center = CGPointMake(220,200);
     banker.layer.cornerRadius = 25.0;
-    //[self.view addSubview:banker];
+    [self.view addSubview:banker];
     
     cup = [[UIView alloc] initWithFrame:CGRectMake(0,0,40,40)];
     cup.center = CGPointMake(280,50);
     cup.layer.transform = CATransform3DMakeRotation(M_PI * 0.2, 1.0, 0, 0);
     cup.layer.cornerRadius = 100;
-    //[self .view addSubview:cup];
+    [self .view addSubview:cup];
      
 }
 
@@ -94,10 +95,10 @@ typedef enum{
 {
     //setUpBall
     ball = [[UIView alloc] initWithFrame:CGRectMake(0,0,20,20)];
-    ball.center = CGPointMake(160,350);
+    ball.center = CGPointMake(59,91);
     ball.layer.cornerRadius = 10.0;
     ball.layer.zPosition = 200;
-    //[self.view addSubview:ball];
+    [self.view addSubview:ball];
 }
 
 
@@ -130,7 +131,7 @@ typedef enum{
                 [clearLabel sizeToFit];
                 clearLabel.center = CGPointMake(160,-200);
                 clearLabel.backgroundColor = [UIColor clearColor];
-                //[self.view addSubview:clearLabel];
+                [self.view addSubview:clearLabel];
                 
                 [UIView animateWithDuration:0.5 animations:^{
                     clearLabel.center = self.view.center;
@@ -192,15 +193,15 @@ typedef enum{
         anchorView.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:0.6].CGColor;
         anchorView.layer.borderWidth = 2.0;
         anchorView.layer.cornerRadius = 5.0;
-        anchorView.center = CGPointMake(startPoint.x - i * (dx / len), startPoint.y - i * (dy / len));
-        //[self.view addSubview:anchorView];
+        anchorView.center = CGPointMake(startPoint.x- i * (dx / len), startPoint.y- i * (dx / len));
+        [self.view addSubview:anchorView];
         [self.anchorArray addObject:anchorView];
     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //話すとボールを飛ばす
+    //離すとボールを飛ばす
     UITouch *t = [touches anyObject];
     CGPoint p = [t locationInView:self.view];
     
@@ -211,8 +212,6 @@ typedef enum{
     for (UIView *v in self.anchorArray){
         [v removeFromSuperview];
     }
- 
 }
-
  
 @end
